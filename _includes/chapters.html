@@ -1,0 +1,11 @@
+{% assign frags = page.path | split: "/" %}
+
+{% if frags.size == 2 %}
+  {% assign chap = frags.last | split: "-" %}
+    <p class="main__chapter is-size-7 is-uppercase">Kapitel {{ chap.first}}</p>
+    <h1 class="title" id="{{ page.title | url_encode}}">{{ page.title }}</h1>
+  {% else %}
+    <h2  id="{{ page.title | url_encode}}">{{page.title}}</h2>
+  {% endif %}
+
+{{ page.content | markdownify }}

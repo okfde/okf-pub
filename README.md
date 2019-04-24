@@ -1,11 +1,6 @@
 # okf-pub
 
-Welcome to your new Jekyll theme! In this directory, you'll find the files you need to be able to package up your theme into a gem. Put your layouts in `_layouts`, your includes in `_includes`, your sass files in `_sass` and any other assets in `assets`.
-
-To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
-
-TODO: Delete this and the text above, and describe your gem
-
+A Jekyll theme for online publications.
 
 ## Installation
 
@@ -31,7 +26,53 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+This is a Jekyll theme for publications. It will render all `_content` into a single html file and generate a navigation with jump links.
+
+Because of that this theme only has one layout, `home`, to be used in your `index.md` like so:
+
+``` yaml
+---
+layout: home
+---
+```
+
+For the layout to find all your Markdown files, put them into `_content` and numerate the filenames and folders for Jekyll to keep the order consistent. E.g:
+
+```
+- _content/
+-- 1-intro.md
+-- 2-overview.md
+-- 3-sections/
+---- 1-subsection.md
+---- 2-subsection.md
+-- 4-afterword.md
+```
+
+`content` is a [collection](https://jekyllrb.com/docs/collections/), in case you were wondering.
+
+There are a bunch of variables you should set in your config.yml to, as well.
+This theme will use the following:
+
+``` yaml
+title: A title
+author: Author
+email: test@test.de
+description: >
+  Description and teaser, used in a couple of places
+# path to the publication as pdf
+pub:
+  pdf: /fake/link/to.pdf
+# were to link back to
+mainpage:
+  url: //your-actual-website.tld
+  label: Go back to the actual website
+
+# Optional, matomo tracking code
+# matomo:
+#   url: //to-your-matomo.tdl
+#   id: projectID
+
+```
 
 ## Contributing
 
