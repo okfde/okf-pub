@@ -23,18 +23,12 @@
     <nav class="header__nav">
       <h2 class="header__nav-title is-size-5">Inhalt</h2>
       <ol>
-        <li><a href="#">Überblick</a>
-          <ul>
-            <li><a href="#">Vision und Ansatz</a></li>
-            <li><a href="#">Überzeugungen und Werte</a></li>
-          </ul>
+        {% for page in site.content %}
+        {% assign frags = page.path | split: "/" %}
+        <li class="{% if frags.size == 2 %}toplevel{% else %}sublevel{% endif %}">
+          <a href="#{{ page.title | url_encode}}">{{ page.title }}</a>
         </li>
-        <li><a href="#">Open Government</a>
-          <ul>
-            <li><a href="#">Frag den Staat</a></li>
-            <li><a href="#">kleineAnfragen</a></li>
-          </ul>
-        </li>
+      {% endfor %}
       </ol>
     </nav>
     <p class="header__footer"><a href="{{ site.mainpage.url }}"><- {{ site.mainpage.label }}</a></p>

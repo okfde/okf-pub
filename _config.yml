@@ -19,6 +19,9 @@ mainpage:
 # Build settings
 theme: okf-pub
 
+collections:
+- content
+
 plugins:
  - jekyll-feed
  - jekyll-seo-tag

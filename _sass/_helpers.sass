@@ -4,8 +4,12 @@ main
 .main__img
   background-color: $okf-grey-1
 
+.main + .main .main__chapter
+  margin-top: 5rem
+
+
 .main__copy
-  padding: 4em 4em 4em 3em
+  padding: 3rem 4em 0em 3em
   background-color: white
 
   .main__chapter
@@ -14,15 +18,18 @@ main
     color: $okf-grey-3
 
   .title
-    margin-bottom: 2em
+    margin-bottom: 2rem
 
   h1, h2, h3, h4
     font-weight: 500
     margin-bottom: 0.8em
     & + p
-      margin-bottom: 1.6em
+      margin-bottom: 1.8em
   h2
     font-size: $size-4
+
+  h3
+    font-size: $size-5
 
   p, ul, ol
     color: $okf-font-2

@@ -59,14 +59,13 @@
   padding: 1.2em $gap / 2 1em
   ol
     list-style: none
-    > li
-      margin-bottom: 1.3rem
+    .toplevel
       &::before
         counter-increment: ordered
         content: counter(ordered)
         margin-right: .4em
-    ul
-      li::before
+    .sublevel
+      &::before
         content: ""
         display: inline-block
         width: 20px
@@ -74,6 +73,8 @@
         vertical-align: middle
         margin-right: 0.4em
         background-color: $okf-font-2
+    .sublevel + .toplevel
+      margin-top: 1.3rem
 
 .header__footer
   flex: 0 0 3rem
