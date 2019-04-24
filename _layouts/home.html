@@ -8,10 +8,10 @@ layout: default
       <div class="colums">
         <div class="column is-three-quarters-mobile is-two-thirds-tablet is-half-desktop">
           <h1 class="title is-spaced is-size-1">
-            {{ page.title }}
+            {{ site.title }}
           </h1>
           <h2 class="subtitle">
-            {{ page.subtitle }}
+            {{ site.description }}
           </h2>
           {% if site.pub and site.pub.pdf %}
           <a href="{{ site.pub.pdf }}" class="button is-link is-uppercase">Download PDF \|/</a>
@@ -21,5 +21,14 @@ layout: default
     </div>
   </div>
 </section>
-
-{{ content }}
+<div>
+  <section class="main columns">
+    <div class="main__img column is-half">
+    </div>
+    <div class="main__copy column is-half">
+      <p class="main__chapter is-size-7 is-uppercase">Kapitel 1</p>
+      <h1 class="title">{{ page.title }}</h1>
+      {{ content }}
+    </div>
+  </section>
+</div>

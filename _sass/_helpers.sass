@@ -1,108 +1,36 @@
-.header
-  position: fixed
-  top: 0
-  bottom: 0
-  left: 0
-  height: 100vh
-  z-index: 5
-  background-color: white
-  width: $header-space-left
-  counter-reset: ordered
-  ol
-    list-style: none
-    > li
-      margin-bottom: 1.3rem
-      &::before
-        counter-increment: ordered
-        content: counter(ordered)
-        margin-right: .4em
-    ul
-      li::before
-        content: ""
-        display: inline-block
-        width: 20px
-        height: 1px
-        vertical-align: middle
-        margin-right: 0.4em
-        background-color: $okf-font-2
-
-  &:target
-    .header__toggleble
-      transform: translateX(0)
-    .toggle__l
-      transform-origin: left bottom
-      transform: rotate(45deg) translate(-3.3em, -1em)
-    .toggle__r
-      transform-origin: right bottom
-      transform: rotate(-45deg) translate(1.9em, -0.9em)
-    .toggle.cross
-      display: block
-    .toggle.burger
-      display: none
-
-.header__visible
-  position: relative
-  width: $header-space-left
-  height: 100vh
-  padding: 0.5rem
-  overflow: hidden
-  z-index: 2
-  background-color: white
-  border-right: solid 1px $okf-grey-2
-
-.header__title
-  position: absolute
-  width: 100vh
-  font-size: 1.2rem
-  transform: rotate(90deg) translate(10%, -40%)
-  transform-origin: left bottom
-
-.header__toggleble
-  //display: none
-  height: 100vh
-  position: absolute
-  top: 0
-  left: $header-space-left
-  display: flex
-  flex-direction: column
-  background: white
-  width: 330px
-  transition: transform 200ms ease
-  transform: translateX(-100%)
-  z-index: 1
-
-.header__nav
-  flex-grow: 1
-  padding: 1.2em $gap / 2 1em
-
-.header__footer
-  flex: 0 0 3rem
-  padding: 1.2em $gap / 2 1em
-  line-height: 1
-  border-top: 1px solid $okf-grey-2
-
-.header__nav-title
-  //font-size: 2rem
-  margin-bottom: $gap / 2
-  font-weight: 500
-
 main
   padding-left: $header-space-left
 
-.toggle
-  display: block
-  padding: 0
-  line-height: 1
-  border: none
-  background-color: transparent
-  &.cross
-    display: none
-  .toggle__icon
-    transform-origin: center center
-    transition: transform 200ms ease
-  .toggle__r,
-  .toggle__l
-    transition: transform 200ms ease
-  &:hover
-    .toggle__icon
-      transform: scale(1.1)
+.main__img
+  background-color: $okf-grey-1
+
+.main__copy
+  padding: 4em 4em 4em 3em
+  background-color: white
+
+  .main__chapter
+    margin-bottom: 1.5em
+    font-weight: 500
+    color: $okf-grey-3
+
+  .title
+    margin-bottom: 2em
+
+  h1, h2, h3, h4
+    font-weight: 500
+    margin-bottom: 0.8em
+    & + p
+      margin-bottom: 1.6em
+  h2
+    font-size: $size-4
+
+  p, ul, ol
+    color: $okf-font-2
+    & + p
+      margin-bottom: 1em
+
+  ul
+    list-style: bullet
+    list-style: disc inside
+    margin: 1em 0
+    padding-left: 2em
