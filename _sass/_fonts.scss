@@ -1,0 +1,37 @@
+/*
+ * Web Fonts from colophon-foundry.org
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Colophon Foundry. The fonts are protected under domestic and international trademark and
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2018 Colophon Foundry
+ *
+ * Licenced to Nadine Stammen
+ */
+
+@font-face {
+  font-family: 'Apercu';
+  font-weight: 400;
+  font-display: swap;
+  src: url('/assets/fonts/apercu-regular-pro.eot');
+  src: url('/assets/fonts/apercu-regular-pro.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/apercu-regular-pro.woff') format('woff'),
+  url('/assets/fonts/apercu-regular-pro.woff2') format('woff2'),
+  url('/assets/fonts/apercu-regular-pro.ttf') format('truetype');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Apercu';
+  font-display: swap;
+  font-weight: 600;
+  src: url('/assets/fonts/apercu-bold-pro.eot');
+  src: url('/assets/fonts/apercu-bold-pro.eot?#iefix') format('embedded-opentype'),
+  url('/assets/fonts/apercu-bold-pro.woff') format('woff'),
+  url('/assets/fonts/apercu-bold-pro.woff2') format('woff2'),
+  url('/assets/fonts/apercu-bold-pro.ttf') format('truetype');
+  font-style: normal;
+
+}
