@@ -1,0 +1,25 @@
+{% if page.problem  %}
+<div class="effect__block">
+  <h3 class="is-size-4">Das Problem</h3>
+  {% assign collection = page.problem %}
+  {% include effect-chain.html %}
+</div>
+{% endif %}
+
+{% if page.solution  %}
+<div class="effect__block">
+  <h3 class="is-size-4">Lösungsansatz</h3>
+  {% assign collection = page.solution %}
+  {% include effect-chain.html %}
+</div>
+{% endif %}
+
+{% if page.effect %}
+<div class="effect__block">
+  <h3 class="is-size-4">Angestrebte Wirkung</h3>
+  {% assign collection = page.effect %}
+  {% include effect-chain.html %}
+</div>
+
+<hr>
+{% endif %}

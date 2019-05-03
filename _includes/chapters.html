@@ -1,11 +1,17 @@
 {% assign frags = page.path | split: "/" %}
-
+{% assign chap = frags.last | split: "-" %}
 {% if frags.size == 2 %}
-  {% assign chap = frags.last | split: "-" %}
     <p class="main__chapter is-size-7 is-uppercase">Kapitel {{ chap.first}}</p>
     <h1 class="title" id="{{ page.title | url_encode}}">{{ page.title }}</h1>
-  {% else %}
-    <h2  id="{{ page.title | url_encode}}">{{page.title}}</h2>
-  {% endif %}
+{% else %}
+    {% if page.chapter %}
+    <p class="main__chapter is-size-7 is-uppercase">Kapitel {{frags[1] | split: "-" | first }}.{{ chap.first}}</p>
+    {% endif %}
+    <h2 class="{% if page.chapter %}title{% endif %}" id="{{ page.title | url_encode}}">{{page.title}}</h2>
+{% endif %}
 
+<div>
 {{ page.content | markdownify }}
+</div>
+
+{% include effect-chains.html %}
