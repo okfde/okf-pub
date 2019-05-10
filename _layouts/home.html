@@ -14,7 +14,19 @@ layout: default
             {{ site.description }}
           </h2>
           {% if site.pub and site.pub.pdf %}
-          <a href="{{ site.pub.pdf }}" class="button is-link is-uppercase">Download PDF \|/</a>
+          <a href="{{ site.pub.pdf }}" class="button is-link is-uppercase">
+            <span>Download PDF</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+                 width="20px" height="20px" class="icon-download">
+              <path d="M15 84 H 85" fill="transparent" stroke="white" stroke-width="7"
+                    stroke-linecap="square" />
+              <path d="M50 10 V 70" fill="transparent" stroke="white"
+                    stroke-width="7" stroke-linecap="round" />
+              <path d="M25 50 L 50 70 L 75 50"
+                    fill="transparent" stroke="white"
+                    stroke-width="7" stroke-linecap="round"/>
+            </svg>
+          </a>
           {% endif %}
         </div>
       </div>
