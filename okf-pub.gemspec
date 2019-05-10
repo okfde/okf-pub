@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 Gem::Specification.new do |spec|
-  spec.name          = "okf-pub"
+  spec.name          = "okf-pub-theme"
   spec.version       = "0.1.0"
   spec.authors       = ["lislis"]
   spec.email         = ["mail@lislis.de"]
