@@ -23,6 +23,13 @@ effect:
   text: lorem ipsum
 - title: Auf Multiplikatoren
   text: Lorem ipsum
+resources:
+  timespan:
+      img: http://placekitten.com/800/80
+      alt: Das beschreibt die Projektlaufzeit in Worten
+  funding:
+      img: http://placekitten.com/800/260
+      alt: Das beschreibt die Finanzierungssituation in Worten
 achievements: >
     - Re-Design von FragDenStaat
 

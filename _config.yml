@@ -12,6 +12,21 @@ mainpage:
   url: //okfn.de
   label: Zur Webseite der OKF
   year: 2018
+chapter:
+  resources:
+    - label: Projektlaufzeit
+      key: timespan
+    - label: Finanzierung
+      key: funding
+  keys:
+    - label: Erbrachte Leistungen
+      key: achievements
+    - label: Output
+      key: outputs
+    - label: Outcome
+      key: outcome
+    - label: Evaluation und Ausblick
+      key: evaluation
 
 # matomo:
 #   url: //to-your-matomo.tdl
