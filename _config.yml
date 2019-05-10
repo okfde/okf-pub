@@ -13,6 +13,13 @@ mainpage:
   label: Zur Webseite der OKF
   year: 2018
 chapter:
+  effects:
+    - label: Das Problem
+      key: problem
+    - label: Lösungsansatz
+      key: solution
+    - label: Angestrebte Wirkung
+      key: effect
   resources:
     - label: Projektlaufzeit
       key: timespan
