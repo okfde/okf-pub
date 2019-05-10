@@ -6,7 +6,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["lislis"]
   spec.email         = ["mail@lislis.de"]
 
-  spec.summary       = "A Jekyll theme for web publications"
+  spec.summary       = "A Jekyll theme for OKF DE publications"
   spec.homepage      = "https://github.com/okfde/okf-pub"
   spec.license       = "MIT"
 
