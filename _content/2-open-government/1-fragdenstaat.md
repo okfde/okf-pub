@@ -1,6 +1,9 @@
 ---
 chapter: true
 title: Frag den Staat
+visual:
+    img: http://placekitten.com/600/700
+    alt: Eine Beschreibung des Textes
 problem:
 - title: Mangelndes Wissen
   text: Das Informationsfreiheitsgesetz is nur wenigen Menschen bekannt
