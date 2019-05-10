@@ -1,0 +1,56 @@
+{% if page.effect %}
+<section>
+  <h2>Was ist {{ site.mainpage.year }} passiert?</h2>
+
+{% if page.resources %}
+  <h3>Resourcen</h3>
+  {% if page.resources.timespan %}
+    <h4>Projektlaufzeit</h4>
+    <img src="{{ page.resources.timespan.img }}" alt="{{ page.resources.timespan.alt }}">
+  {% endif %}
+
+  {% if page.resources.funding %}
+    <h4>Finanzierung</h4>
+    <img src="{{ page.resources.funding.img }}" alt="{{ page.resources.funding.alt }}">
+  {% endif %}
+{% endif %}
+
+<div class="chapter__outcomes">
+{% if page.achievements %}
+  <div class="columns">
+    <h3 class="column is-one-third">Erbrachte Leistungen</h3>
+    <div class="column is-two-thirds no-inner-margin">
+      {{ page.achievements | markdownify}}
+    </div>
+  </div>
+{% endif %}
+
+{% if page.outputs %}
+  <div class="columns">
+    <h3 class="column is-one-third">Output</h3>
+    <div class="column is-two-thirds no-inner-margin">
+      {{ page.outputs | markdownify}}
+    </div>
+  </div>
+{% endif %}
+
+{% if page.outcome %}
+  <div  class="columns">
+    <h3 class="column is-one-third">Outcome</h3>
+    <div class="column is-two-thirds no-inner-margin">
+      {{ page.outcome | markdownify}}
+    </div>
+  </div>
+{% endif %}
+
+{% if page.evaluation %}
+  <div  class="columns">
+    <h3 class="column is-one-third">Evaluation und Ausblick</h3>
+    <div class="column is-two-thirds no-inner-margin">
+      {{ page.evaluation | markdownify}}
+    </div>
+  </div>
+{% endif %}
+</section>
+
+{% endif %}

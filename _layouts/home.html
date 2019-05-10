@@ -18,6 +18,7 @@ layout: default
             <span>Download PDF</span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
                  width="20px" height="20px" class="icon-download">
+              <title>download icon</title>
               <path d="M15 84 H 85" fill="transparent" stroke="white" stroke-width="7"
                     stroke-linecap="square" />
               <path d="M50 10 V 70" fill="transparent" stroke="white"
@@ -33,7 +34,7 @@ layout: default
     </div>
   </div>
 </section>
-<div>
+<article>
   {% for page in site.content %}
   <section class="main columns">
     <div class="main__img column is-half">
@@ -43,4 +44,4 @@ layout: default
     </div>
   </section>
   {% endfor %}
-</div>
+</article>

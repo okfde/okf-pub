@@ -23,6 +23,33 @@ effect:
   text: lorem ipsum
 - title: Auf Multiplikatoren
   text: Lorem ipsum
+achievements: >
+    - Re-Design von FragDenStaat
+
+    - neue Kampagnenfunktionen und Batch-Anfragen für Journalisten
+
+    - Lorem ipsum
+outputs: >
+    * Lorem ipsum
+
+    * Lorem ipsum
+
+    * Lorem ipsum
+
+    * Lorem ipsum
+outcome: >
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae nisi volutpat, fringilla sapien ut, luctus ligula. Maecenas cursus id eros ac gravida. Nam ut dapibus tellus. Aliquam pharetra, massa quis aliquam viverra, erat dolor aliquet massa, at elementum dolor nunc sed tellus. Sed varius at lorem a blandit. Sed eleifend, orci eu viverra ultricies, neque nunc mattis nulla, eu mollis tellus justo eu turpis. Praesent rhoncus eros odio, ut commodo lorem commodo vitae.
+evaluation:  >
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae nisi volutpat, fringilla sapien ut, luctus ligula. Maecenas cursus id eros ac gravida. Nam ut dapibus tellus. Aliquam pharetra, massa quis aliquam viverra.
+
+    ##### Risiken
+
+    * lol
+
+    * lel
+
+
+    Maecenas cursus id eros ac gravida. Nam ut dapibus tellus. Aliquam pharetra, massa quis aliquam viverra.
 
 ---
 

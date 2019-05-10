@@ -11,6 +11,7 @@ pub:
 mainpage:
   url: //okfn.de
   label: Zur Webseite der OKF
+  year: 2018
 
 # matomo:
 #   url: //to-your-matomo.tdl
