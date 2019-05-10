@@ -55,8 +55,6 @@ This theme will use the following:
 
 ``` yaml
 title: A title
-author: Author
-email: test@test.de
 description: >
   Description and teaser, used in a couple of places
 # path to the publication as pdf
@@ -90,6 +88,10 @@ chapter:
 # matomo:
 #   url: //to-your-matomo.tdl
 #   id: projectID
+
+# All only .md files in the _content folder will be used
+collections:
+- content
 
 ```
 
