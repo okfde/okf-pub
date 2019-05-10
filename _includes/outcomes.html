@@ -19,7 +19,7 @@
 {% endif %}
 
   <div class="chapter__outcomes">
-    {% for x in site.chapter.keys %}
+    {% for x in site.chapter.outcomes %}
       {% if page[x.key] %}
         <div class="columns chapter__item">
           <h3 class="column is-one-third">{{ x.label }}</h3>

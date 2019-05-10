@@ -66,6 +66,25 @@ pub:
 mainpage:
   url: //your-actual-website.tld
   label: Go back to the actual website
+  year: 2018
+# used to generate project meta content
+# these are the keys that will be looked for in the project.md files
+chapter:
+  effects:
+    - label: Some Key
+      key: somekey
+    - label: another Key
+      key: anotherkey
+  resources:
+    - label: Some Resource
+      key: someresource
+    - label: Another Resource
+      key: anotherresource
+  outcomes:
+    - label: Some Outcome
+      key: someoutcome
+    - label: Anoter outcome with elaborate Title
+      key: anotheroutcome
 
 # Optional, matomo tracking code
 # matomo:

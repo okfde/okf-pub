@@ -1,4 +1,4 @@
-title: Tätigkeitsbericht der Open Knowledge Foundation 2018
+title: Ein Titel
 author: Author
 email: test@test.de
 description: > # this means to ignore newlines until "show_exerpts:"
@@ -9,8 +9,8 @@ show_excerpts: false # set to true to show excerpts on the homepage
 pub:
   pdf: /fake/link/to.pdf
 mainpage:
-  url: //okfn.de
-  label: Zur Webseite der OKF
+  url: //your-actual-website.tld
+  label: Go back to your actual website
   year: 2018
 chapter:
   effects:
@@ -25,7 +25,7 @@ chapter:
       key: timespan
     - label: Finanzierung
       key: funding
-  keys:
+  outcomes:
     - label: Erbrachte Leistungen
       key: achievements
     - label: Output

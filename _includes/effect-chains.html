@@ -1,5 +1,5 @@
 {% if page.problem  %}
-
+<section>
 {% for x in site.chapter.effects %}
   {% if page[x.key] %}
     <div class="effect__block">
@@ -13,6 +13,6 @@
     </div>
   {% endif %}
 {% endfor %}
-
+</section>
 <hr>
 {% endif %}
