@@ -1,8 +1,23 @@
-.icon-download
-  display: inline-block
-  margin: 0 -0.1em 0 0.5em
-
-
 .no-inner-margin
   & >:first-child
     margin-top: 0
+
+.hero-actions
+  a
+    display: inline-block
+    vertical-align: baseline
+    font-weight: 500
+  a.button
+    line-height: 1.8
+    &:hover,
+    &:active
+      .icon-start
+        transform: translateX(.2em)
+  a + a
+    margin-left: 1.3rem
+    color: $okf-blue !important
+
+.icon-start
+  vertical-align: sub
+  margin-left: .3em
+  transition: transform 200ms ease
