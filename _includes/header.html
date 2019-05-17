@@ -35,6 +35,16 @@
       {% endfor %}
       </ol>
     </nav>
-    <p class="header__footer"><a href="{{ site.mainpage.url }}"><- {{ site.mainpage.label }}</a></p>
+    <p class="header__footer"><a href="{{ site.mainpage.url }}">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+           width="18px" height="18px" class="icon-back-to">
+        <title>Arrow pointing left</title>
+        <path d="M10 50 H 80" fill="transparent" stroke="#112233"
+              stroke-width="7" stroke-linecap="square"/>
+        <path d="M40 25 L 8 50 L 40 75"
+              fill="transparent" stroke="#112233"
+              stroke-width="7" stroke-linecap="round"/>
+      </svg>
+      {{ site.mainpage.label }}</a></p>
   </div>
 </header>

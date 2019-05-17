@@ -15,44 +15,7 @@ layout: default
       <div class="main__copy__inner">
         {% include chapters.html %}
       </div>
-      <aside class="main__next">
-        {% assign pages = site.pages | sort:"chapter" %}
-        {% assign found = 'false' %}
-        {% assign nextp = 'foo' %}
-        {% for p in pages %}
-          {% if p.layout == 'page' %}
-            {% if found == 'true' %}
-            {% assign nextp = p %}
-            {% break %}
-          {% endif %}
-          {% if p.url == page.url %}
-            {% assign found = 'true' %}
-          {% endif %}
-          {% endif %}
-        {% endfor %}
-        <hr>
-        <a class="main__next__link" href="{{ nextp.url }}"
-           href="Zum nächsten Kapitel {{ nextp.title }}">
-        <p>
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
-               width="35px" height="35px" class="icon-next-chapter">
-            <title>Arrow pointing right</title>
-            <path d="M10 50 H 80" fill="transparent" stroke="#9d9d9d"
-                  stroke-width="7" stroke-linecap="square"/>
-            <path d="M60 25 L 84 50 L 60 75"
-                  fill="transparent" stroke="#9d9d9d"
-                  stroke-width="7" stroke-linecap="round"/>
-          </svg>
-        </p>
-        <p class="main__next__chapter is-uppercase is-size-7">Nächstes Kapitel</p>
-        <h2 class="main__next__title is-size-3">{{ nextp.title }}</h2>
-        </a>
-        {% if site.license %}
-        <hr>
-        <p class="main__next__license">{{ site.license.holder }} ·<br>
-        {{ site.license.license }}</p>
-        {% endif %}
-      </aside>
+      {% include next_chapter.html %}
     </div>
   </section>
 </article>

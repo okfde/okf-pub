@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<section class="hero is-light is-fullheight">
+<section class="hero is-light is-fullheight" style="{% if site.main_image %}background-image: url({{ site.main_image}}){% endif %}">
   <div class="hero-body">
     <div class="container">
       <div class="colums">
@@ -35,8 +35,9 @@ layout: default
                       stroke-width="7" stroke-linecap="round"/>
               </svg>
             </a>
-            {% if site.pub and site.pub.pdf %}
-            <a href="{{ site.pub.pdf }}" class="is-uppercase">
+
+            {% if site.mainpage.pdf %}
+            <a href="{{ site.mainpage.pdf }}" class="is-uppercase">
               Download PDF
             </a>
             {% endif %}

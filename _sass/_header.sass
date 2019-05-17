@@ -72,6 +72,13 @@
         counter-increment: ordered
         content: counter(ordered)
         margin-right: .55rem
+      &.active,
+      &:hover,
+      &:active,
+        a
+          color: $okf-blue
+        &::before
+          color: $okf-blue
     .sublevel
       &::before
         content: ""
@@ -104,6 +111,15 @@
   padding: 1.2em $gap / 2 1em
   line-height: 1
   border-top: 1px solid $okf-grey-2
+  .icon-back-to
+    vertical-align: middle
+    transition: transform 200ms ease
+  a:hover,
+  a:active
+    .icon-back-to
+      transform: translateX(-0.2em)
+    path
+      stroke: $okf-blue
 
 .header__nav-title
   margin-bottom: $gap / 2
