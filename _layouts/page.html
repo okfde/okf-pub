@@ -10,6 +10,12 @@ layout: default
            alt="{{ page.visual.alt }}"
            class="main__img__img">
       {% endif%}
+
+      {% if page.visuals %}
+      {% for vis in page.visuals %}
+      <img src="{{ vis.img }}" alt="{{ vis.alt }}" class="main__img__vis">
+      {% endfor %}
+      {% endif %}
     </div>
     <div class="main__copy column is-half">
       <div class="main__copy__inner">
