@@ -6,6 +6,9 @@ description: > # this means to ignore newlines until "show_exerpts:"
 
 show_excerpts: false # set to true to show excerpts on the homepage
 
+license:
+  holder: Open Knowledge Foundation Deutschland
+  license: License CC BY-SA 3.0
 pub:
   pdf: /fake/link/to.pdf
 mainpage:

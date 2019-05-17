@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<article>
+  <section class="main columns">
+    <div class="main__img column is-half">
+      {% if page.visual %}
+      <img src="{{ page.visual.img}}"
+           alt="{{ page.visual.alt }}"
+           class="main__img__img">
+      {% endif%}
+    </div>
+    <div class="main__copy column is-half">
+      <div class="main__copy__inner">
+        {% include chapters.html %}
+      </div>
+      <aside class="main__next">
+        <hr>
+        <a class="main__next__link" href="#" href="Zum nächsten Kapitel">
+        <p>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"
+               width="35px" height="35px" class="">
+            <title>Arrow pointing right</title>
+            <path d="M10 50 H 80" fill="transparent" stroke="#9d9d9d" stroke-width="7" stroke-linecap="square"/>
+            <path d="M60 25 L 84 50 L 60 75"
+                  fill="transparent" stroke="#9d9d9d"
+                  stroke-width="7" stroke-linecap="round"/>
+          </svg>
+        </p>
+        <p class="main__next__chapter is-uppercase is-size-7">Nächstes Kapitel</p>
+        <h2 class="main__next__title is-size-3">Open Gov</h2>
+        </a>
+        {% if site.license %}
+        <hr>
+        <p class="main__next__license">{{ site.license.holder }} ·<br>
+        {{ site.license.license }}</p>
+        {% endif %}
+      </aside>
+    </div>
+  </section>
+</article>
