@@ -7,13 +7,13 @@ A Jekyll theme for online publications.
 Add this line to your Jekyll site's `Gemfile`:
 
 ```ruby
-gem "okf-pub"
+gem "okf-pub-theme"
 ```
 
 And add this line to your Jekyll site's `_config.yml`:
 
 ```yaml
-theme: okf-pub
+theme: okf-pub-theme
 ```
 
 And then execute:
@@ -22,33 +22,38 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install okf-pub
+    $ gem install okf-pub-theme
 
 ## Usage
 
-This is a Jekyll theme for publications. It will render all `_content` into a single html file and generate a navigation with jump links.
+This is a Jekyll theme for publications, sort of like a book.
 
-Because of that this theme only has one layout, `home`, to be used in your `index.md` like so:
+It offers two layouts, `home` and `page`.
+
+`home` should be used for the landing page of your site, like the `index.md` on the top level like so:
+
+``` md
+---
+layout: home
+title: Landing page
+---
+```
+Every other page that represents a page in the book gets layout `page`.
+
+To ensure that Jekyll handles all pages in the correct order always, add the `chapter` key in the frontmatter and give it a continuous value. You can add it below the title.
+
+To see if a page is top or sub level in the main navigation, the theme will look at the permalink key in the front matter.
+
+So a page should have the following keys:
 
 ``` yaml
 ---
-layout: home
+layout: page
+title: Introduction chapter or whatever
+permalink: /introduction/
+chapter: 1
 ---
 ```
-
-For the layout to find all your Markdown files, put them into `_content` and numerate the filenames and folders for Jekyll to keep the order consistent. E.g:
-
-```
-- _content/
--- 1-intro.md
--- 2-overview.md
--- 3-sections/
----- 1-subsection.md
----- 2-subsection.md
--- 4-afterword.md
-```
-
-`content` is a [collection](https://jekyllrb.com/docs/collections/), in case you were wondering.
 
 There are a bunch of variables you should set in your config.yml to, as well.
 This theme will use the following:
@@ -57,14 +62,17 @@ This theme will use the following:
 title: A title
 description: >
   Description and teaser, used in a couple of places
-# path to the publication as pdf
-pub:
-  pdf: /fake/link/to.pdf
-# were to link back to
+# optional image for the landing page
+main_image: path/to-image.png
+# information for licenses in the footer
+license:
+  holder: Open Knowledge Foundation Deutschland
+  license: License CC BY-SA 3.0
 mainpage:
   url: //your-actual-website.tld
   label: Go back to the actual website
   year: 2018
+  pdf: /fake/link/to.pdf
 # used to generate project meta content
 # these are the keys that will be looked for in the project.md files
 chapter:
@@ -88,10 +96,6 @@ chapter:
 # matomo:
 #   url: //to-your-matomo.tdl
 #   id: projectID
-
-# All only .md files in the _content folder will be used
-collections:
-- content
 
 ```
 
