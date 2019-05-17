@@ -9,6 +9,12 @@
   width: $header-space-left
   counter-reset: ordered
 
+  a
+    color: $okf-font-1
+    &:hover,
+    &:active
+      color: $okf-blue
+
   // this is the menu toggle logic
   &:target
     .header__toggleble
@@ -57,22 +63,39 @@
 .header__nav
   flex-grow: 1
   padding: 1.2em $gap / 2 1em
+  li
+    position: relative
   ol
     list-style: none
     .toplevel
       &::before
         counter-increment: ordered
         content: counter(ordered)
-        margin-right: .4em
+        margin-right: .55rem
     .sublevel
       &::before
         content: ""
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto
         display: inline-block
-        width: 20px
+        width: 10px
         height: 1px
         vertical-align: middle
         margin-right: 0.4em
         background-color: $okf-font-2
+        transition: width 200ms ease
+      a
+        padding-left: 1.3rem
+      &.active,
+      &:hover,
+      &:active,
+        a
+          color: $okf-blue
+        &::before
+          width: 18px
+          background-color: $okf-blue
     .sublevel + .toplevel
       margin-top: 1.3rem
 

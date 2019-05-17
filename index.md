@@ -1,6 +1,6 @@
 ---
 layout: home
-title: Hallo
+title: Startpage
 ---
 
 Das hier wird ignoriert

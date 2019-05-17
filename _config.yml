@@ -40,10 +40,7 @@ chapter:
 #   id: projectID
 
 # Build settings
-theme: okf-pub
-
-collections:
-- content
+theme: okf-pub-theme
 
 plugins:
  - jekyll-feed

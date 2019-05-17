@@ -1,5 +1,5 @@
 <header class="header" id="menutoggle">
-  <a href="#content" class="show-on-focus skip">Zum Inhalt skippen</a>
+  <a href="#content" class="show-on-focus skip">Zum Inhalt springen</a>
   <div class="header__visible">
     <div class="header__toggle">
       <a href="#menutoggle" class="toggle burger" title="Menü ausklappen">
@@ -16,18 +16,22 @@
       </a>
     </div>
     <div class="header__title">
-      <h2>{{ site.title }}</h2>
+      <h2><a href="/">{{ site.title }}</a></h2>
     </div>
   </div>
   <div  class="header__toggleble">
     <nav class="header__nav">
       <h2 class="header__nav-title is-size-5">Inhalt</h2>
       <ol>
-        {% for page in site.content %}
-        {% assign frags = page.path | split: "/" %}
-        <li class="{% if frags.size == 2 %}toplevel{% else %}sublevel{% endif %}">
-          <a href="#{{ page.title | url_encode}}">{{ page.title }}</a>
+        {% assign sorted_pages = site.pages | sort:"chapter" %}
+        {% for p in sorted_pages %}
+        {% if p.layout == 'page' %}
+        {% assign frags = p.path | split: "/" %}
+        <li class="{% if frags[1] == 'index.md' %}toplevel{% else %}sublevel{% endif %}
+                   {% if page.url == p.permalink %}active{% endif %}">
+          <a href="{{ p.permalink }}">{{ p.title }}</a>
         </li>
+        {% endif %}
       {% endfor %}
       </ol>
     </nav>
