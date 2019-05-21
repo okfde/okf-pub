@@ -7,9 +7,8 @@ main
   padding-left: $column-gap
   padding-right: 0
   background-color: $okf-grey-1
-.main__img__img
-  width: 100%
-//  margin-top: 14.5rem
+  position: relative
+  z-index: 1
 
 .main + .main .main__chapter
   margin-top: 5rem
@@ -23,12 +22,21 @@ main
     &:nth-of-type(odd)
       float: right
 
+.main__img__vislist,
+.main__img__img
+  width: 100%
+  @media (min-width: $tablet)
+    width: 50%
+    position: fixed
+
 .main__copy__inner
+  min-height: 100vh
   max-width: 40rem
   margin: auto
 
 .main__copy
-  min-height: 100vh
+  position: relative
+  z-index: 2
   padding: 3rem 4em 0em 3em
   background-color: white
 
