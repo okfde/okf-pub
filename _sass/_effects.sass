@@ -4,7 +4,6 @@
 
 .effect__chain
   list-style: none
-  margin-left: 1rem
   $spacing: 0.3rem
   h4
     margin-bottom: $spacing
@@ -23,13 +22,23 @@
 
   p:not(.effect__claim)
     border-left: 1px solid $okf-grey-2
-  li:last-of-type
-    p
-      border: none
+
+  li
+    margin-left: 1rem
+    &:last-of-type
+      p
+        border: none
+    &:only-child
+      margin-left: 0
+      p
+        padding: 0
 
   .effect__claim
-    &::before
-      content: "🔥"
-      margin-right: 1rem
-      margin-left: -1.6rem
-      margin-right: 0.6rem
+    p
+      padding-bottom: 1rem
+      border: none
+      &::before
+        content: "🔥"
+        margin-right: 1rem
+        margin-left: -1.6rem
+        margin-right: 0.6rem

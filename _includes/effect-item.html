@@ -1,5 +1,5 @@
-<li>
+<li {% if item.claim %}class="effect__claim"{% endif %}>
   {% if item.title %}<h4>{{ item.title }}</h4>{% endif %}
   {% if item.text %}<p>{{ item.text }}</p>{% endif %}
-  {% if item.claim %}<p class="effect__claim"><strong>{{ item.claim }}</strong></p>{% endif %}
+  {% if item.claim %}<p><strong>{{ item.claim }}</strong></p>{% endif %}
 </li>
