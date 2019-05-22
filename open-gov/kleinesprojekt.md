@@ -3,6 +3,7 @@ layout: page
 chapter: 2.2
 title: Kleines Projekt
 permalink: /open-government/kleinesprojekt
+website: https://foo.de
 visuals:
     - img: http://placekitten.com/600/400
       alt: Eine Beschreibung des Textes

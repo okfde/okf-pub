@@ -36,7 +36,9 @@ chapter:
       key: outputs
     - label: Outcome
       key: outcome
-    - label: Evaluatio
+    - label: Impact
+      key: impact
+    - label: Evaluation
       key: evaluation
     - label: Ausblick
       key: outlook
