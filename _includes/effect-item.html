@@ -1,5 +1,5 @@
-<li {% if item.claim %}class="effect__claim"{% endif %}>
+<li>
   {% if item.title %}<h4>{{ item.title }}</h4>{% endif %}
-  {% if item.text %}<p>{{ item.text }}</p>{% endif %}
-  {% if item.claim %}<p><strong>{{ item.claim }}</strong></p>{% endif %}
+  {% if item.text %}<div>{{ item.text | markdownify }}</div>{% endif %}
+  {% if item.claim %}<div>{{ item.claim | markdownify }}</div>{% endif %}
 </li>

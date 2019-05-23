@@ -1,18 +1,20 @@
 {% if page.problem  %}
 <section>
+  <ol class="effect-chain">
 {% for x in site.chapter.effects %}
   {% if page[x.key] %}
-    <div class="effect__block">
+    <li class="effect-chain__link">
       <h3 class="is-size-4">{{ x.label }}</h3>
       {% assign collection = page[x.key] %}
-      <ol class="effect__chain">
+      <ul class="effect-chain__sublink {{ x.key }}">
         {% for item in collection %}
-          {% include effect-item.html %}
+        {% include effect-item.html %}
         {% endfor %}
-      </ol>
-    </div>
+      </ul>
+    </li>
   {% endif %}
-{% endfor %}
+    {% endfor %}
+    </ol>
 </section>
 <hr>
 {% endif %}

@@ -1,44 +1,72 @@
-.effect__block
-  margin-top: 5rem
+.effect-chain
+  list-style: none
   counter-reset: effects
 
-.effect__chain
-  list-style: none
-  $spacing: 0.3rem
-  h4
-    margin-bottom: $spacing
-    display: inline-block
-    &::before
-      counter-increment: effects
-      content: counter(effects)
+
+  $spacing: 0.25rem
+  .effect-chain__link
+    h3
+      margin-top: 0.5rem
+      margin-bottom: $spacing
       display: inline-block
-      font-weight: 500
-      margin-right: 1rem
-  p
-    padding-left: 1.2rem
-    padding-bottom: 2em
-    margin-left: 0.25em
-    margin-bottom: $spacing !important
-
-  p:not(.effect__claim)
-    border-left: 1px solid $okf-grey-2
-
-  li
-    margin-left: 1rem
-    &:last-of-type
-      p
-        border: none
-    &:only-child
-      margin-left: 0
-      p
-        padding: 0
-
-  .effect__claim
-    p
-      padding-bottom: 1rem
-      border: none
       &::before
-        content: "🔥"
+        counter-increment: effects
+        content: counter(effects)
+        display: inline-block
+        font-weight: 500
         margin-right: 1rem
-        margin-left: -1.6rem
-        margin-right: 0.6rem
+    h4
+      margin-bottom: 0
+      color: $okf-font-1
+
+  .effect-chain__sublink
+    margin: 0 0 0 $spacing
+    padding: 2.2rem 0 5rem 2rem
+    border-left: 2px solid $okf-grey-2
+    > li
+      position: relative
+      margin-bottom: 3rem
+      list-style: none
+      &::before
+        content: ""
+        position: absolute
+        top: -0.2rem
+        left: -2.5rem
+        display: block
+        width: 2rem
+        height: 2rem
+        background-color: white
+      &::after
+        content: ""
+        position: absolute
+        top: .5rem
+        left: -2.4rem
+        display: block
+        width: .5em
+        height: .5em
+        background-color: $okf-grey-2
+        border-radius: 50%
+
+    &.problem
+      > li::after,
+      > li::before
+        content: none
+    &.causes
+      > li:last-of-type::after
+        content: "="
+        background-color: transparent
+        color: $okf-grey-2
+        font-size: 2rem
+        line-height: 0.5
+        text-align: center
+        left: -2.6rem
+    &.effect
+      > li:last-of-type::after
+        content: "💪"
+        background-color: white
+        font-size: 1.2em
+        line-height: 0.7
+        left: -2.7rem
+        width: 1rem
+        height: 15rem
+        border-radius: 0
