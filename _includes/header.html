@@ -4,12 +4,14 @@
     <div class="header__toggle">
       <a href="#menutoggle" class="toggle burger" title="Menü ausklappen">
         <svg viewBox="0 0 100 100" width="60px" height="40px" class="toggle__icon">
+          <title>Hamburger icon</title>
           <rect x="0" y="38" width="100" height="5" class="toggle__r" />
           <rect x="0" y="63" width="100" height="5" class="toggle__l" />
         </svg>
       </a>
       <a href="#" class="toggle cross" title="Menü einklappen">
         <svg viewBox="0 0 100 100" width="60px" height="40px" class="toggle__icon">
+          <title>Close icon</title>
           <rect x="0" y="38" width="100" height="5" class="toggle__r" />
           <rect x="0" y="63" width="100" height="5" class="toggle__l" />
         </svg>
@@ -20,7 +22,7 @@
     </div>
   </div>
   <div  class="header__toggleble">
-    <nav class="header__nav">
+    <nav class="header__nav" aria-label="Hauptnavigation">
       <h2 class="header__nav-title is-size-5">Inhalt</h2>
       <ol>
         {% assign sorted_pages = site.pages | sort:"chapter" %}
