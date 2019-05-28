@@ -1,0 +1,14 @@
+<div class="team">
+{% for person in site.data.team %}
+<div>
+  <p class="team-entry">
+    <strong class="team-entry__name">{{ person.name }}</strong>
+    {% assign img_path = person.name | downcase | split: ' ' | join: '' %}
+    <img class="team-entry__img"
+         src="/assets/images/team/{{ img_path }}.jpg"
+         alt="Bild von {{ person.name }}"></p>
+  <p><em>{{ person.position }}</em><br>
+  {{ person.text }}</p>
+</div>
+{% endfor %}
+</div>
