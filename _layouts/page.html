@@ -22,6 +22,9 @@ layout: default
     <div class="main__copy column is-three-fifths">
       <div class="main__copy__inner">
         {% include chapters.html %}
+        {% if page.team %}
+          {% include team.html %}
+        {% endif %}
       </div>
       {% include next_chapter.html %}
     </div>

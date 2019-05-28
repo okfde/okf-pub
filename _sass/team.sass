@@ -1,0 +1,22 @@
+.team
+  & > div
+    margin-bottom: 10rem
+
+.team-entry
+  display: flex
+  flex-direction: column-reverse
+  @media (min-width: $desktop)
+    flex-direction: row
+    align-items: end
+    justify-content: space-between
+
+
+.team-entry__img
+  object-fit: cover
+  max-height: 180px
+  @media (min-width: $tablet)
+    flex: 0 1 200px
+    max-height: 120px
+
+
+.tema-entry__name
