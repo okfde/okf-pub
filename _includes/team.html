@@ -7,12 +7,13 @@
       {% assign img_path =  person.img %}
     {% else  %}
       {% assign img_path = person.name | downcase | split: ' ' | join: '' %}
-    {% endif %}
+    {% endif %}</p>
+  <p>
     <img class="team-entry__img"
-         src="/assets/images/team/{{ img_path }}.jpg"
-         alt="Bild von {{ person.name }}"></p>
-  <p><em>{{ person.position }}</em><br>
-  {{ person.text }}</p>
+          src="/assets/images/team/{{ img_path }}.jpg"
+          alt="Bild von {{ person.name }}">
+    <em>{{ person.position }}</em><br>
+    {{ person.text }}</p>
 </div>
 {% endfor %}
 </div>

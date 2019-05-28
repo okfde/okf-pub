@@ -22,8 +22,8 @@
     {% for x in site.chapter.outcomes %}
       {% if page[x.key] %}
         <div class="columns chapter__item">
-          <h3 class="column is-one-third">{{ x.label }}</h3>
-          <div class="column is-two-thirds no-inner-margin">
+          <h3 class="column is-one-quarter">{{ x.label }}</h3>
+          <div class="column is-three-quarters no-inner-margin">
             {{ page[x.key] | markdownify}}
           </div>
         </div>

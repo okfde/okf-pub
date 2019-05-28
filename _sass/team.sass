@@ -1,25 +1,15 @@
 .team
   & > div
-    margin-bottom: 10rem
-
-.team-entry
-  display: flex
-  flex-direction: column-reverse
-  @media (min-width: $desktop)
-    flex-direction: row
-    align-items: end
-    justify-content: space-between
+    margin-bottom: 4rem
 
 
 .team-entry__img
+  display: inline-block
+  margin: 0 0 0.5em 0.6em
+  width: 100%
+  height: 160px
+  float: right
   object-fit: cover
-  max-height: 180px
   @media (min-width: $tablet)
-    flex: 0 1 200px
-    max-height: 120px
-    margin-top: -4em
-
-  &:first-of-type
-    margin-top: 0
-
-//.tema-entry__name
+    width: 200px
+    height: 120px
