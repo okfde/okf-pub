@@ -16,6 +16,8 @@
   <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
+  <link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+
   {%- if jekyll.environment == 'production' and site.matomo -%}
   {%- include matomo.html -%}
   {%- endif -%}
