@@ -3,7 +3,11 @@
 <div>
   <p class="team-entry">
     <strong class="team-entry__name">{{ person.name }}</strong>
-    {% assign img_path = person.name | downcase | split: ' ' | join: '' %}
+    {% if person.img  %}
+      {% assign img_path =  person.img %}
+    {% else  %}
+      {% assign img_path = person.name | downcase | split: ' ' | join: '' %}
+    {% endif %}
     <img class="team-entry__img"
          src="/assets/images/team/{{ img_path }}.jpg"
          alt="Bild von {{ person.name }}"></p>
