@@ -31,7 +31,7 @@
         {% assign frags = p.path | split: "/" %}
         <li class="{% if frags[1] == 'index.md' %}toplevel{% else %}sublevel{% endif %}
                    {% if page.url == p.permalink %}active{% endif %}">
-          <a href="{{ p.permalink }}">{{ p.title }}</a>
+          <a href="{{ site.baseurl }}{{ p.permalink }}">{{ p.title }}</a>
         </li>
         {% endif %}
       {% endfor %}
