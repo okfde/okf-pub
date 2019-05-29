@@ -31,3 +31,21 @@
     font-size: 2rem
     @media (min-width: $tablet)
       font-size: 3.9rem
+
+.download-table
+  text-transform: uppercase
+  font-size: 1rem
+  font-weight: 500
+  &:before
+    content: ""
+    background-image: url(/assets/images/table.svg)
+    background-repeat: no-repeat
+    width: 1em
+    height: 1.2em
+    display: inline-block
+    vertical-align: sub
+    margin-right: 0.5em
+  &:active,
+  &:hover
+    color: $okf-blue
+    text-decoration: underline
