@@ -3,6 +3,7 @@ layout: page
 chapter: 2.1
 title: FragDenStaat
 permalink: /open-government/fragdenstaat
+website: https://fragdenstaat.de
 visual:
     img: http://placekitten.com/600/700
     alt: Eine Beschreibung des Textes
