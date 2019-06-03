@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "okf-pub-theme"
-  spec.version       = "0.2.15"
+  spec.version       = "0.2.16"
   spec.authors       = ["lislis"]
   spec.email         = ["mail@lislis.de"]
 
