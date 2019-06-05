@@ -24,11 +24,6 @@ chapter:
       key: solution
     - label: Angestrebte Wirkung
       key: effect
-  resources:
-    - label: Projektlaufzeit
-      key: timespan
-    - label: Finanzierung
-      key: funding
   outcomes:
     - label: Erbrachte Leistungen
       key: achievements
