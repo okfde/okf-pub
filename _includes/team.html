@@ -1,19 +1,19 @@
 <div class="team">
-{% for person in site.data.team %}
-<div>
-  <p class="team-entry">
-    <strong class="team-entry__name">{{ person.name }}</strong>
-    {% if person.img  %}
+  {% for person in site.data.team %}
+  <div>
+    <p class="team-entry">
+      <strong class="team-entry__name">{{ person.name }}</strong>
+      {% if person.img  %}
       {% assign img_path =  person.img %}
-    {% else  %}
+      {% else  %}
       {% assign img_path = person.name | downcase | split: ' ' | join: '' %}
-    {% endif %}</p>
-  <p>
-    <img class="team-entry__img"
-          src="/assets/images/team/{{ img_path }}.jpg"
-          alt="Bild von {{ person.name }}">
-    <em>{{ person.position }}</em><br>
-    {{ person.text }}</p>
-</div>
-{% endfor %}
+      {% endif %}</p>
+    <p>
+      <img class="team-entry__img"
+           src="/assets/images/team/{{ img_path }}.jpg"
+           alt="Bild von {{ person.name }}">
+      <em>{{ person.position }}</em><br>
+      {{ person.text }}</p>
+  </div>
+  {% endfor %}
 </div>

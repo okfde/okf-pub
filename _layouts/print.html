@@ -1,0 +1,39 @@
+---
+layout: default
+---
+
+<div class="print">
+  <section class="main__copy column">
+    <div class="main__copy__inner">
+      {% assign sorted_pages = site.pages | sort:"chapter" %}
+      {% for page in sorted_pages %}
+      {% if page.layout == 'home' %}
+      <h1 class="title is-spaced">
+        {{ site.title }}
+      </h1>
+      <h2 class="subtitle">
+        {{ site.description }}
+      </h2>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+
+  {% assign sorted_pages = site.pages | sort:"chapter" %}
+  {% for page in sorted_pages %}
+  {% if page.layout == 'page' %}
+  {% assign frags = page.path | split: "/" %}
+  <section>
+    <div class="main__copy column">
+      <div class="main__copy__inner">
+        {% include chapters.html %}
+        {% if page.team %}
+        {% include team.html %}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {% endif %}
+  {% endfor %}
+</div>

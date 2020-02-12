@@ -1,0 +1,61 @@
+@media print
+  body
+    background: white
+    font-size: 12px
+  main
+    padding-left: 0 !important
+  h1
+    page-break-after: avoid
+  h2, h3, h4
+    page-break-before: avoid
+    page-break-after: avoid
+  .main__chapter
+    page-break-before: always
+  .effect-chain__link
+    page-break-inside: avoid
+
+  img
+    height: auto
+    min-height: 25%
+    max-width: 100% !important
+
+  article
+    page-break-before: always
+
+  ul, img
+    page-break-inside: avoid
+
+  a
+    font-weight: bolder
+    color: currentColor
+    text-decoration: none
+
+  a[href^=http]:after
+    content: " (" attr(href) ")"
+
+  a[href^="#"]:after
+    content: ""
+
+  .column
+    display: block !important
+
+  .main__copy,
+  .main__copy__inner,
+  .main__chapter,
+  .main__copy__inner
+    max-width: 100% !important
+    width: 100% !important
+    display: block !important
+    height: auto !important
+    min-height: auto !important
+    background-color: none !important
+    float: none !important
+    font-size: 1rem
+    padding-left: 0 !important
+    padding-right: 0 !important
+
+  .header,
+  .main__img__vis,
+  .main__img__vislist,
+  .main__img__img,
+    display: none
