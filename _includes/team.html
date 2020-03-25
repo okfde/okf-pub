@@ -13,7 +13,13 @@
            src="/assets/images/team/{{ img_path }}.jpg"
            alt="Bild von {{ person.name }}">
       <em>{{ person.position }}</em><br>
-      {{ person.text }}</p>
+      {% if person.text != "" %}
+        {{ person.text }}
+      {% endif %}
+      {% if person.bio != ""  %}
+        {{ person.bio }}
+      {% endif %}
+    </p>
   </div>
   {% endfor %}
 </div>
