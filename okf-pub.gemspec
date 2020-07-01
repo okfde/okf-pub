@@ -2,9 +2,9 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "okf-pub-theme"
-  spec.version       = "0.2.23"
-  spec.authors       = ["lislis"]
-  spec.email         = ["mail@lislis.de"]
+  spec.version       = "0.2.24"
+  spec.authors       = ["lislis", "OKF"]
+  spec.email         = ["info@okfn.de"]
 
   spec.summary       = "A Jekyll theme for OKF DE publications"
   spec.homepage      = "https://github.com/okfde/okf-pub"
